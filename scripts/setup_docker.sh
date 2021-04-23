@@ -24,7 +24,7 @@ sudo apt-get --force-yes --yes install docker-ce docker-ce-cli containerd.io doc
 
 # Instalación Nginx y Postgres
 
-sudo apt install postgresql postgresql-contrib nginx curl
+sudo apt-get --force-yes --yes install postgresql postgresql-contrib nginx curl
 
 # Instalar cosas de Python
 
