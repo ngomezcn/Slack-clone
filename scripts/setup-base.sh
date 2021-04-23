@@ -30,7 +30,7 @@ sudo apt-get -y install python3-pip
 
 sudo -u root pip3 install virtualenv 
 
-sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib nginx curl
+#sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib nginx curl
 
 git clone https://github.com/NgomezKS/M12/
 
