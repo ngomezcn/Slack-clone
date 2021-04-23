@@ -22,10 +22,10 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debi
 sudo apt-get --force-yes --yes update
 sudo apt-get --force-yes --yes install docker-ce docker-ce-cli containerd.io docker-compose
 
-# Instalación Nginx
+# Instalación Nginx y Postgres
 
-sudo apt install nginx
+sudo apt install postgresql postgresql-contrib nginx curl
 
 # Instalar cosas de Python
 
-sudo apt-get install python3-venv
+sudo pip3 install virtualenv 
