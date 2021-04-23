@@ -26,3 +26,6 @@ sudo apt-get --force-yes --yes install docker-ce docker-ce-cli containerd.io doc
 
 sudo apt install nginx
 
+# Instalar cosas de Python
+
+sudo apt-get install python3-venv
