@@ -1,4 +1,6 @@
-# Instalación de Docker
+# Este script instala todas las depencias necesarias para poder iniciar un servidor de produccion Nginx Guincorn Django Postgresql
+
+
 sudo apt update
 sudo apt-get --force-yes --yes install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
@@ -20,12 +22,14 @@ sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add 
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 
 sudo apt-get --force-yes --yes update
-sudo apt-get --force-yes --yes install docker-ce docker-ce-cli containerd.io docker-compose
+#sudo apt-get --force-yes --yes install docker-ce docker-ce-cli containerd.io docker-compose
 
-# Instalar Pip3 para manegar paquetes Python
+# Instalar dependencias generales
 
 sudo apt-get -y install python3-pip
 
 sudo su - 
 
-pip3 install virtualenv
+pip3 install virtualenv 
+
+sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib nginx curl
