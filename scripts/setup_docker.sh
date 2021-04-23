@@ -28,4 +28,5 @@ sudo apt-get --force-yes --yes install postgresql postgresql-contrib nginx curl
 
 # Instalar cosas de Python
 
+sudo apt-get --force-yes --yes install python3-pip
 sudo pip3 install virtualenv 
