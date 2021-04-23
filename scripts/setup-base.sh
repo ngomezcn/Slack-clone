@@ -28,11 +28,7 @@ sudo apt-get --force-yes --yes update
 
 sudo apt-get -y install python3-pip
 
-sudo su - 
-
-pip3 install virtualenv 
-
-exit
+sudo -u root pip3 install virtualenv 
 
 sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib nginx curl
 
