@@ -32,7 +32,9 @@ sudo su -
 
 pip3 install virtualenv 
 
+exit
+
 sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib nginx curl
 
-echo("Script finalizado.")
-echo("Dependencias instaladas para -> Nginx, Postgress, Virtualenv(Guincorn & Django)")
+echo Script finalizado.
+echo Dependencias instaladas para -> Nginx, Postgress, Virtualenv(Guincorn & Django)
