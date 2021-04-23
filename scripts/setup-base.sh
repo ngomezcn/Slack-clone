@@ -22,20 +22,20 @@ sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add 
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 
 sudo apt-get --force-yes --yes update
-#sudo apt-get --force-yes --yes install docker-ce docker-ce-cli containerd.io docker-compose
+sudo apt-get --force-yes --yes install docker-ce docker-ce-cli containerd.io docker-compose
 
 # Instalar dependencias generales
 
 sudo apt-get -y install python3-pip
-
-#sudo -u root pip3 install virtualenv 
+sudo -u root pip3 install virtualenv 
 
 sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib nginx curl
 
-apt-get --force-yes --yes git
-git clone https://github.com/NgomezKS/M12/
+sudo apt-get --force-yes --yes install git-all
+git clone https://github.com/NgomezKS/space-chat-m12
+cd space-chat-m12
 
 echo Script finalizado.
-echo Dependencias instaladas para -> Nginx, Postgress, Virtualenv(Guincorn & Django)
+echo Dependencias instaladas para -> Nginx, Postgress, Virtualenv Guincorn & Django
 
-rm -r setup-base.sh
+#rm -r setup-base.sh
