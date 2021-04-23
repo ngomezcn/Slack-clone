@@ -31,7 +31,7 @@ sudo -u root pip3 install virtualenv
 
 sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib nginx curl
 
-sudo apt-get --force-yes --yes install git-all
+sudo apt-get --force-yes --yes install git
 git clone https://github.com/NgomezKS/space-chat-m12
 cd space-chat-m12
 
