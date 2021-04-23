@@ -26,4 +26,6 @@ sudo apt-get --force-yes --yes install docker-ce docker-ce-cli containerd.io doc
 
 sudo apt-get -y install python3-pip
 
- pip3 install virtualenv
+sudo su - 
+
+pip3 install virtualenv
