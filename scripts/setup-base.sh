@@ -36,5 +36,9 @@ exit
 
 sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib nginx curl
 
+git clone https://github.com/NgomezKS/M12/
+
 echo Script finalizado.
 echo Dependencias instaladas para -> Nginx, Postgress, Virtualenv(Guincorn & Django)
+
+rm -r setup-base.sh
