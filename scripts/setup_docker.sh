@@ -22,3 +22,8 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debi
 sudo apt-get --force-yes --yes update
 sudo apt-get --force-yes --yes install docker-ce docker-ce-cli containerd.io docker-compose
 
+# Instalar Pip3 para manegar paquetes Python
+
+sudo apt-get -y install python3-pip
+
+ pip3 install virtualenv
