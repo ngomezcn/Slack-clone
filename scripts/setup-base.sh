@@ -33,9 +33,7 @@ sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib n
 
 sudo apt-get --force-yes --yes install git
 git clone https://github.com/NgomezKS/space-chat-m12
-cd space-chat-m12
 
 echo Script finalizado.
-echo Dependencias instaladas para -> Nginx, Postgress, Virtualenv Guincorn & Django
 
 #rm -r setup-base.sh
