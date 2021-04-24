@@ -34,6 +34,10 @@ sudo apt-get --force-yes --yes install libpq-dev postgresql postgresql-contrib n
 sudo apt-get --force-yes --yes install git
 git clone https://github.com/NgomezKS/space-chat-m12
 
+# varios
+sudo apt-get --force-yes --yes install vim
+sudo apt-get --force-yes --yes install tree
+
 echo Script finalizado.
 
 #rm -r setup-base.sh
