@@ -5,11 +5,9 @@ from .models import Room
 from .exceptions import ClientError
 # from .exceptions import ClientError # Por el momento no se utiliza
 
-from .utils import get_room_or_error
+from .utils import get_room_or_error, message_db
 import datetime
 import time
-import json
-from .messages import test
 
 
 class ChatConsumer(AsyncJsonWebsocketConsumer):
@@ -70,7 +68,6 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
                 pass
 
     ##### Command helper methods called by receive_json
-
     async def join_room(self, room_id):
         """
         Called by receive_json when someone sent a join command.
@@ -156,7 +153,7 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
         
     ##### Handlers for messages sent over the channel layer
 
-    # These helper methods are named by the types we send - so chat.join becomes chat_join
+    # These helper methods are named by the types we send - so chat.join becomes 
     async def chat_join(self, event):
         """
         Called when someone has joined our chat.
@@ -200,6 +197,6 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
                 "timestamp": time_now
             },
         )
-        await test(int(event["room_id"]), event["username"], event["message"], time_now, settings.MSG_TYPE_MESSAGE)
+        await message_db(int(event["room_id"]), event["username"], event["message"], time_now, settings.MSG_TYPE_MESSAGE)
         
         

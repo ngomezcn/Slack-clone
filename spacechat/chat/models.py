@@ -9,8 +9,6 @@ class Room(models.Model):
     """
     A room for people to chat in.
     """
-    default_auto_field = 'django.db.models.AutoField'
-    #id = models.AutoField(primary_key=True)
 
     # Chat title/name
     title = models.CharField(max_length=255, default="")
@@ -19,9 +17,9 @@ class Room(models.Model):
     desc = models.CharField(max_length=255, default="")
     
     # If only "staff" users are allowed (is_staff on django's User)
-    staff_only = models.BooleanField(default=False)
+    #staff_only = models.BooleanField(default=False)
         
-    my_json = models.JSONField(default={}, blank=True)
+    my_json = models.JSONField(default=dict, blank=True)
     counter = models.IntegerField(default=0)
     
     def __str__(self):
