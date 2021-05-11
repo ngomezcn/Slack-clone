@@ -1,0 +1,23 @@
+[Unit]
+Description=gunicorn_spacechat
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=vagrant
+Group=www-data
+WorkingDirectory=/home/vagrant/app/spacechat
+ExecStart=/home/vagrant/app/spacechat/venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          spacechat.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+
