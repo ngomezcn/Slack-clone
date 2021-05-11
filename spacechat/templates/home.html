@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>asdsa</title>
+<div id="app" style="background-color:#F2F7FF">
+<div id="sidebar" class="active">
+   <div class="sidebar-wrapper active">
+      <div class="sidebar-header">
+         <div class="d-flex justify-content-between">
+            <div class="logo">
+               <button id="home-page-btn" type="button" onclick="window.location = '/';">
+                  <h2><i class="bi bi-chat-right-dots-fill"></i> SpaceChat</h2>
+               </button>
+               <h6>  Bienvenido usuario <span class="badge bg-light-success"> {{user}} </span></h6>
+            </div>
+            <div class="toggler">
+               <a href="#" onclick="close_sidebar()" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+            </div> 
+         </div>
+      </div>
+      <div class="sidebar-menu">
+         <ul class="menu">
+            <li class="sidebar-title" >Chats</li>
+            {% for room in rooms %}
+
+            <li class="sidebar-item" id="chat-{{ room.id }}">
+               <a  onclick='joinChat("{{room.id}}")' data-room-id="{{ room.id }}" class='sidebar-link'>
+               <i class="bi bi-chat-dots-fill"></i>
+               <span>{{ room }}</span>
+               </a>                  
+               {% empty %}
+               <p class="empty">No se ha creado ningún chat, contacte con el administrador.</p>
+               {% endfor %}
+            </li>
+
+            <li class="sidebar-title">Cuenta</li>
+            <li class="sidebar-item"><a href="accounts/logout" class='sidebar-link'><i class="bi bi-arrow-return-left"></i><span>Cerrar sesión</span></a>               
+            </li>
+         </ul>
+      </div>
+   </div>
+   <div id="main">
+      <header class="mb-3">
+         <a href="#" onclick="open_sidebar()" class="burger-btn d-block d-xl-none">
+         <i class="bi bi-justify fs-3"></i>
+         </a>
+      </header>
+      <div class="page-heading">
+         <div class="page-title">
+            <div class="row">
+               <div class="col-12 col-md-6 order-md-1 order-last">
+                  <h3>Bienvenido a SpaceChat</h3>
+                  <p class="text-subtitle text-muted">Esta es una demo de un proyecto de mensajería real desarrollado con Django y desplegado en un entorno de producción real.</p>
+                  <p class="text-subtitle text-muted">Para más información acerca del código y la documentación técnica al final de esta página :)</p>
+                  <br>
+                  
+               </div>
+               <div class="col-12 col-md-6 order-md-2 order-first">
+                  <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">SpaceChat</li>
+                     </ol>
+                  </nav>
+               </div>
+            </div>
+         </div>        
+         <section id="content-types">
+            <div class="row">
+               <div class="col-xl-4 col-md-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-content">
+                        <div class="card-body">
+                           <h4 class="card-title">Gunicorn</h4>
+                           <p class="card-text">
+                              Es un <b>servidor de aplicaciones</b> web <b>WSGI</b>, se puede utilizar como servidor principal, 
+                              pero normalmente se utiliza como adaptador para desviar las <b>solicitudes HTTP</b> en servidores 
+                              de <b>desarrollo como Nginx</b>
+                           </p>
+                        </div>
+                        <img class="img-fluid w-100" src="https://imgix.datadoghq.com/img/blog/monitor-gunicorn-performance/gunicorn-hero.png?fit=crop&w=1200&h=630"
+                           alt="Card image cap">
+                     </div>
+                     <div class="card-footer d-flex justify-content-between">
+                        <span>Server for UNIX</span>
+                        <form action="https://gunicorn.org/" target="_blank">
+                           <button type="submit" class="btn btn-light-primary">Aprender mas sobre Gunicorn</button>
+                         </form>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-xl-4 col-md-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-content">
+                        <img src="https://cdn.swapps.com/uploads/2019/04/django-faster.jpg" class="card-img-top img-fluid"
+                           alt="singleminded">
+                        <div class="card-body">
+                           <h5 class="card-title">Python/Django</h5>
+                           <p class="card-text">                     
+                              Django es un framework web de alto nivel <b>escrito en Python</b> que permite el desarrollo <b>rápido de sitios web seguros</b> y mantenibles.                              
+                              Está enfocado al <b>desarrollo backend</b> y puede funcionar con cualquier framework en el lado del cliente,
+                              algunas grandes empresas como <b>Instagram, Facebook, Spotify</b>... utilizan Django.
+                           </p>
+                        </div>
+                     </div>
+                      <div class="card-footer d-flex justify-content-between">
+                        <span>Framework Backend</span>
+                        <form action="https://github.com/django/django" target="_blank">
+                           <button type="submit" class="btn btn-light-primary">Ver en GitHub</button>
+                         </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-md-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-content">
+                        <div class="card-body">
+                           <h4 class="card-title mb-0">Como funciona Websockets TCP</h4>
+                        </div>
+                        <div class="embed-responsive embed-responsive-item embed-responsive-16by9 w-100">
+                           <iframe src="https://www.youtube.com/embed/qJT2FY1jjjE" style="width:100%"
+                              height="300" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                           <p class="card-text">
+                              WebSocket es un protocolo de red <b>basado en TCP</b> que establece 
+                              cómo deben intercambiarse <b>datos entre redes</b>, proporciona un canal 
+                              de comunicación <b>bidireccional fiable y eficiente</b>.
+                           </p>                        
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-content">
+                        <img class="card-img-top img-fluid" src="https://curity.io/images/resources/code-examples/code-examples-nginx.png"
+                           alt="Card image cap" style="height: 20rem" />
+                        <div class="card-body">
+                           <h4 class="card-title">NGINX | Servidor de alto rendimiento</h4>
+                           <p class="card-text">
+                               Es un servidor <b>web/proxy inverso</b> ligero de alto rendimiento <b>escrito en C</b>,
+                               es el servidor de desarrollo más común en <b>aplicaciones Django</b>, actualmente 
+                               está <b>presente en el 55%</b> de las webs del planeta.
+                           </p>                     
+                           <form action="https://www.nginx.com/" target="_blank">
+                           <button type="submit" class="btn btn-primary block">Página oficial</button>
+                         </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="card">
+                     <div class="card-content">
+                        <div class="card-body">
+                           <h4 class="card-title">ORM de Django</h4>
+                           <p class="card-text">                                                            
+                              Una de las características más poderosas de Django es su <b>Mapeador Relacional de Objetos</b> (ORM),
+                              que permite <b>interactuar con la base de datos</b> sin tener que utilizar <b>instrucciones SQL</b> (Structured Query Language).
+                              
+                           </p>
+                           <p class="card-text">
+                              Gracias al <b>ORM de Django</b> podemos definir una clase para los datos necesarios y <br>automáticamente Django</br> se encargará de 
+                              convertirla para trasladarla a la base de datos y gestionar su interacción.
+                           </p>
+                        </div>
+                        <img class="card-img-bottom img-fluid" src="https://cdn.swapps.com/uploads/2019/09/django-orm.jpg"
+                           alt="Card image cap" style="height: 20rem; object-fit: cover;">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <section class="section">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Documentación </h4>
+                        </div>
+                        <div class="card-body">
+                            Antes de todo indicar que el aspecto visual de la página web, la mayoría del código HTML y CSS no es de mi autoría, es una plantilla
+                           descargada de themewagon.com y el autor original es @ShareBootstrap, la plantilla ha sido modificada para poder adaptarse a las necesidades de la app.                                                      
+                        </div>
+                        <div class="card-body">
+
+                        <form action="https://www.nginx.com/" target="_blank">
+                           <button type="submit" class="btn btn-light-primary">Documentación tecnica</button>
+                        </form>
+                        <br>
+                        <form action="https://github.com/NgomezKS" target="_blank">
+                           <button type="submit" class="btn btn-primary block">Repo GitHub</button>
+                        </form>
+                        </div>
+                    </div>
+                </section>
+         
+      </div>
+      
+   </div>
+</div>
+{% endblock %}
+
+{% block extra_body %}
+<script>
+   function joinChat(chat) 
+   {            
+       window.location.href = '/chat/' + chat;
+   }
+
+   function open_sidebar() {
+      document.getElementById("sidebar").classList.add("active");
+   }
+
+   function close_sidebar() {
+      document.getElementById("sidebar").classList.remove("active");
+   }
+</script>
+{% endblock %}
