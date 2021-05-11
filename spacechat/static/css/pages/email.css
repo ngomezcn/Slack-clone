@@ -11,11 +11,11 @@
 .email-application .content-area-wrapper {
 	border: 1px solid #dfe3e7;
 	border-radius: .267rem;
-	height: calc(100% - 5rem);
+	height: 700px;
 	display: flex;
 	position: relative
 }
-
+/*
 .email-application .content-area-wrapper .app-content-overlay {
 	top: 0;
 	left: 0;
@@ -195,7 +195,7 @@
 .email-application .content-area-wrapper .content-right .email-app-list-wrapper .email-app-list .email-action .action-right .email-fixed-search .form-control-position {
 	top: 3px
 }
-
+*/
 .email-application .content-area-wrapper .content-right .email-app-details .email-detail-header i,
 .email-application .content-area-wrapper .content-right .email-app-list-wrapper .email-app-list .email-action .action-left ul li i {
 	top: 0
@@ -559,7 +559,7 @@
 @-webkit-keyframes fadeIn {
 	0% {
 		opacity: 0;
-		top: 100px
+		top: 1px
 	}
 	75% {
 		opacity: .5;
@@ -573,7 +573,7 @@
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
-		top: 100px
+		top: 1px
 	}
 	75% {
 		opacity: .5;
