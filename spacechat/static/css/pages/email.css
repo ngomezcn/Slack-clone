@@ -140,7 +140,7 @@
 	width: calc(100% - 260px);
 	background-color: #fff
 }
-*/
+
 
 .email-application .content-area-wrapper .content-right .content-wrapper {
 	padding: 0
@@ -181,7 +181,7 @@
 	font-size: 1rem;
 	font-family: IBM Plex Sans, Helvetica, Arial, serif
 }
-
+*/
 .email-application .content-area-wrapper .content-right .email-app-list-wrapper .email-app-list .email-action .action-right .email-fixed-search input:-ms-input-placeholder {
 	font-size: 1rem;
 	font-family: IBM Plex Sans, Helvetica, Arial, serif
