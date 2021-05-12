@@ -22,14 +22,14 @@ if the cost exceeds the limit.
 
 ## Some screenshots of the app
 
-### Login page - screenshot
+### Login page 
 <img src="./images/login_screen.jpg">
 
-### Home page - screenshot
+### Home page 
 <img src="./images/dashboard_screen.jpg">
 
-### Example chat page - screenshot
-<img src="./images/dashboard_screen.jpg">
+### Example chat page 
+<img src="./images/chat_example.jpg">
 
 
 With `--why`, Size Limit can tell you *why* your library is of this size
