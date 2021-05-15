@@ -13,11 +13,13 @@ server {
         root /home/vagrant/app/spacechat;
     }
 
+    # Redirect HTTP to Gunicorn
     location / {
         include proxy_params;
         proxy_pass http://unix:/run/gunicorn.sock;
     }
 
+    # Redirect WebSockets to Daphne
     location ~* (chat/stream/) {
             proxy_pass http://0.0.0.0:8001;
             proxy_http_version 1.1;

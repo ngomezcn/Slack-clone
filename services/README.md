@@ -4,37 +4,6 @@ These files must go in the folder "/etc/systemd/system/"
 - gunicorn.service
 - gunicorn.socket
 
+Those servies are called are used by Nginx to pass HTTP and WebSocket connections to Django.
 
-
-
-
-Comandos de ayuda:
-sudo journalctl -u {service}.socket
-sudo systemctl status {service}
-
-
-
-
-Despues de un ajuste
-sudo systemctl daemon-reload
-sudo systemctl restart {service}
-
-
-# daphne
-
-#! /bin/bash
-
-service daphne start
-#docker run -p 6379:6379 -d redis:latest
-docker run -p 6379:6379 -d redis:6.2.3
-
-exit 0
-
-
-sudo chmod 755 /etc/init.d/daphne-init
-sudo update-rc.d nt
- defaults
-
-
-
-
+The spacechat-init file should go to the folder "/etc/init.d/" is used to activate Redis and Daphne when starting the server.
