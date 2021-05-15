@@ -12,15 +12,13 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-##### Channels-specific settings
-redis_host = os.environ.get('REDIS_HOST', 'localhost')
 
 # Channel layer definitions
 # http://channels.readthedocs.io/en/latest/topics/channel_layers.html
+
+redis_host = os.environ.get('REDIS_HOST', 'localhost')
+
 CHANNEL_LAYERS = {
     "default": {
         # Redis channel layer implementation channels_redis
@@ -31,47 +29,26 @@ CHANNEL_LAYERS = {
     },
 }
 
-
 ASGI_APPLICATION = 'spacechat.routing.application'
-WSGI_APPLICATION = 'spacechat.routing.application'
+WSGI_APPLICATION = 'spacechat.wsgi.application'
 
 
-##### Project-specific settings
+# MSG_TYPE definitions
 
-NOTIFY_USERS_ON_ENTER_OR_LEAVE_ROOMS = True
-
-MSG_TYPE_MESSAGE = 0  # For standard messages
-MSG_TYPE_WARNING = 1  # For yellow messages
-MSG_TYPE_ALERT = 2  # For red & dangerous alerts
-MSG_TYPE_MUTED = 3  # For just OK information that doesn't bother users
-MSG_TYPE_ENTER = 4  # For just OK information that doesn't bother users
-MSG_TYPE_LEAVE = 5  # For just OK information that doesn't bother users
+MSG_TYPE_MESSAGE = 0  #
 
 MESSAGE_TYPES_CHOICES = (
     (MSG_TYPE_MESSAGE, 'MESSAGE'),
-    (MSG_TYPE_WARNING, 'WARNING'),
-    (MSG_TYPE_ALERT, 'ALERT'),
-    (MSG_TYPE_MUTED, 'MUTED'),
-    (MSG_TYPE_ENTER, 'ENTER'),
-    (MSG_TYPE_LEAVE, 'LEAVE'),
 )
 
 MESSAGE_TYPES_LIST = [
-    MSG_TYPE_MESSAGE,
-    MSG_TYPE_WARNING,
-    MSG_TYPE_ALERT,
-    MSG_TYPE_MUTED,
-    MSG_TYPE_ENTER,
-    MSG_TYPE_LEAVE,
+    MSG_TYPE_MESSAGE
 ]
 
 
-##### Normal Django settings
-
 # SECURITY WARNING: keep the secret key used in production secret! And don't use debug=True in production!
-SECRET_KEY = 'imasecret' # 
-DEBUG = False
-
+SECRET_KEY = 'PyK1sN0ub7vY4MWJkxpri74AkafCB96u' 
+DEBUG = True
 
 # The simplest case: just add the domain name(s) and IP addresses of your Django server
 # ALLOWED_HOSTS = [ 'example.com', '203.0.113.5']
@@ -121,13 +98,9 @@ TEMPLATES = [
     },
 ]
 
-
-WSGI_APPLICATION = 'spacechat.wsgi.application'
-
-DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -135,33 +108,44 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
-# Deliberately turned off for this example.
-AUTH_PASSWORD_VALIDATORS = []
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 9,
+        }
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
 
-# Este es para Nginx
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-# Este es para runserver
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "assets/"),
 ]
