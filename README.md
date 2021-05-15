@@ -15,7 +15,7 @@ This project has been inspired by applications such as WhatsApp and Slack, the i
 * **Wrapped WebSocket** connection over the module AuthMiddlewareStack.
 * Using a pretty GUI to help user to interact with app. 
 * You can also manage all chats from **Django Administrator panel**
-* Using **JSON** files to make messages perisent on **Sqlite database**
+* Using **JSON** files to make messages perisent in **sqlite database**
 
 ## Some screenshots of the app
 
@@ -39,25 +39,13 @@ This project has been inspired by applications such as WhatsApp and Slack, the i
 
 Im not going to following developing and maintain this project anymore, if you wanna use it be some purpose be free to dot it.
 
-<p align="center">
-  <a href="https://evilmartians.com/?utm_source=size-limit">
-    <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
-         alt="Sponsored by Evil Martians" width="236" height="54">
-  </a>
-</p>
-
-[GitHub action]: https://github.com/andresz1/size-limit-action
-[cult-img]:      http://cultofmartians.com/assets/badges/badge.svg
-[cult]:          http://cultofmartians.com/tasks/size-limit-config.html
-
 
 ## Libraries and documentation used 
-
 * [Django](https://www.djangoproject.com/) and
   [Django Channels](https://channels.readthedocs.io/en/stable/).
 * [Nginx conf](https://www.nginx.com/)
 * [Gunicorn repo](https://github.com/benoitc/gunicorn)
 * [Redis](https://pypi.org/project/channels-redis/) 
-* [daphne](https://github.com/django/daphne) 
+* [Ddaphne](https://github.com/django/daphne) 
 * [Digital Ocean](https://github.com/postcss/postcss/commit/)
 * and a lot more ...

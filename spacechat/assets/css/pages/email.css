@@ -11,7 +11,7 @@
 .email-application .content-area-wrapper {
 	border: 1px solid #dfe3e7;
 	border-radius: .267rem;
-	height: 700px;
+	height: calc(100% - 10rem);
 	display: flex;
 	position: relative
 }
@@ -84,7 +84,6 @@
 	position: relative;
 	height: calc(100% - 6.4rem)
 }
-
 .email-application .content-area-wrapper .sidebar .email-app-sidebar .email-app-menu .sidebar-menu-list a:hover {
 	color: #596f88
 }
@@ -142,6 +141,7 @@
 	background-color: #fff
 }
 
+
 .email-application .content-area-wrapper .content-right .content-wrapper {
 	padding: 0
 }
@@ -181,7 +181,7 @@
 	font-size: 1rem;
 	font-family: IBM Plex Sans, Helvetica, Arial, serif
 }
-
+*/
 .email-application .content-area-wrapper .content-right .email-app-list-wrapper .email-app-list .email-action .action-right .email-fixed-search input:-ms-input-placeholder {
 	font-size: 1rem;
 	font-family: IBM Plex Sans, Helvetica, Arial, serif
@@ -195,7 +195,7 @@
 .email-application .content-area-wrapper .content-right .email-app-list-wrapper .email-app-list .email-action .action-right .email-fixed-search .form-control-position {
 	top: 3px
 }
-*/
+
 .email-application .content-area-wrapper .content-right .email-app-details .email-detail-header i,
 .email-application .content-area-wrapper .content-right .email-app-list-wrapper .email-app-list .email-action .action-left ul li i {
 	top: 0
