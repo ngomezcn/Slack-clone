@@ -3,20 +3,19 @@
 
 
 <img src="https://iconape.com/wp-content/png_logo_vector/nginx.png" align="right"
-     alt="Size Limit logo by Anton Lovchikov" width="150" height="150">
+      width="150" height="150">
 
-Size Limit is a performance budget tool for JavaScript. It checks every commit
-on CI, calculates the real cost of your JS for end-users and throws an error
-if the cost exceeds the limit.
+This project has been inspired by applications such as WhatsApp and Slack, the idea behind this project is to be able to create a minimum viable product of a real-time messaging web application using websockets technology, deployed in a real production environment.
 
 * **Nginx** proxy pass to **Daphne ASGI** and **Gunicorn WSGI**.
-* Using **Redis Channel** to manage layer for the websocket conections.
-* Configured /static/ folder on Nginx to serve all static files like css, javascript ,images.
-* All conections HTTP and WebSockets are working over TLS/SSL.
+* Using **Redis Channel** to manage all websockets layer
+* Configured `/static/` folder on Nginx to serve all static files like **css, javascript, images**.
+* All conections **HTTP and WebSockets** are working over **TLS/SSL**.
 * Using csrf token on login page to avoid middleware attacks.
-* Wrapped WebSocket connection over the module AuthMiddlewareStack.
+* **Wrapped WebSocket** connection over the module AuthMiddlewareStack.
 * Using a pretty GUI to help user to interact with app. 
-
+* You can also manage all chats from **Django Administrator panel**
+* Using **JSON** files to make messages perisent on **Sqlite database**
 
 ## Some screenshots of the app
 
@@ -28,6 +27,7 @@ if the cost exceeds the limit.
 
 ### Example chat page 
 <img src="./images/chat_example.jpg">
+
 
 
 With `--why`, Size Limit can tell you *why* your library is of this size
