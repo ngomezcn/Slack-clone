@@ -1,7 +1,5 @@
 # Django Channels realtime message app 
 ## Deployed on a Nginx production server with Daphne and Gunicorn over SSL
-### Video demostration: https://youtu.be/OxISvgrwO2w?t=81
-
 
 <img src="https://iconape.com/wp-content/png_logo_vector/nginx.png" align="right"
       width="150" height="150">
@@ -18,7 +16,13 @@ This project has been inspired by applications such as WhatsApp and Slack, the i
 * You can also manage all chats from **Django Administrator panel**
 * Using **JSON** files to make messages perisent in **sqlite database**
 
-## Use
+### Realtime example
+<video width="320" height="240" controls>
+  <source src="https://youtu.be/OxISvgrwO2w?t=81">
+</video>
+(Also https://youtu.be/OxISvgrwO2w?t=81)
+
+## How To Deploy
 
 Clone repository and after change the name of the folder to app/:
 
