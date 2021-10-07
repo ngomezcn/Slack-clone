@@ -17,10 +17,9 @@ This project has been inspired by applications such as WhatsApp and Slack, the i
 * Using **JSON** files to make messages perisent in **sqlite database**
 
 ### Realtime example
-<video width="320" height="240" controls>
-  <source src="https://youtu.be/OxISvgrwO2w?t=81">
-</video>
-(Also https://youtu.be/OxISvgrwO2w?t=81)
+
+![](images/video_gif.gif)
+Full video on YouTube [SpaceChat](https://youtu.be/OxISvgrwO2w?t=81)
 
 ## How To Deploy
 
