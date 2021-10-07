@@ -1,5 +1,6 @@
 # Django Channels realtime message app 
 ## Deployed on a Nginx production server with Daphne and Gunicorn over SSL
+### Video demostration: https://youtu.be/OxISvgrwO2w?t=81
 
 
 <img src="https://iconape.com/wp-content/png_logo_vector/nginx.png" align="right"
