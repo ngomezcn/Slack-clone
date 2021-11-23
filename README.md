@@ -19,7 +19,7 @@ This project has been inspired by applications such as WhatsApp and Slack, the i
 ### Realtime example
 
 ![](images/video_gif.gif)
-Full video on YouTube [SpaceChat](https://youtu.be/OxISvgrwO2w?t=81)
+Full video on YouTube [SpaceChat](https://youtu.be/OxISvgrwO2w?t=83)
 
 ## How To Deploy
 
