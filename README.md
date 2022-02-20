@@ -1,10 +1,8 @@
-# Django Channels realtime message app 
-## Deployed on a Nginx production server with Daphne and Gunicorn over SSL
-
+# Slack / WhatsApp Clone
 <img src="https://iconape.com/wp-content/png_logo_vector/nginx.png" align="right"
       width="150" height="150">
 
-This project has been inspired by applications such as WhatsApp and Slack, the idea behind this project is to be able to create a minimum viable product of a real-time messaging web application using websockets technology, deployed in a real production environment.
+The idea behind this project is to be able to create a minimum viable product of a real-time messaging web application using websockets technology, deployed in a real production environment.
 
 * **Nginx** configured proxy pass to **Daphne ASGI** and **Gunicorn WSGI**.
 * **Redis Channel** to manage all websockets layers
