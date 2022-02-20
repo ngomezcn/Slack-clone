@@ -21,6 +21,17 @@ This project has been inspired by applications such as WhatsApp and Slack, the i
 ![](images/video_gif.gif)
 Full video on YouTube [SpaceChat](https://youtu.be/OxISvgrwO2w?t=83)
 
+## Some screenshots of the app
+
+### Login page 
+<img src="./images/login_screen.jpg">
+
+### Home page 
+<img src="./images/dashboard_screen.jpg">
+
+### Example chat page 
+<img src="./images/chat_example.jpg">
+
 ## How To Deploy
 
 Clone repository and after change the name of the folder to app/:
@@ -75,18 +86,6 @@ Now you can search https://172.10.10.10/, this is the default user to access.
   
     User: admin 
     Password: p4ssword!
-
-
-## Some screenshots of the app
-
-### Login page 
-<img src="./images/login_screen.jpg">
-
-### Home page 
-<img src="./images/dashboard_screen.jpg">
-
-### Example chat page 
-<img src="./images/chat_example.jpg">
 
 ## To do ideas
 * Add support for multiple languages or at least for the most common ones
