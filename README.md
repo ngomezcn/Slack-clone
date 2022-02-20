@@ -7,21 +7,18 @@
 This project has been inspired by applications such as WhatsApp and Slack, the idea behind this project is to be able to create a minimum viable product of a real-time messaging web application using websockets technology, deployed in a real production environment.
 
 * **Nginx** configured proxy pass to **Daphne ASGI** and **Gunicorn WSGI**.
-* Using **Redis Channel** to manage all websockets layers
-* Configured `/static/` folder on Nginx to serve all static files like **CSS, Javascript, Images**...
-* All connections **HTTP and WebSockets** are working over **TLS/SSL**.
-* Using **csrf token** on login page to avoid middleware attacks.
+* **Redis Channel** to manage all websockets layers
+* All connections over **TLS/SSL**.
+* **CSRF token** to avoid middleware attacks.
 * **Wrapped WebSocket** connection over the module AuthMiddlewareStack.
-* Using a pretty GUI to help user to interact with app. 
-* You can also manage all chats from **Django Administrator panel**
 * Using **JSON** files to make messages perisent in **sqlite database**
+
+## Some screenshots of the app
 
 ### Realtime example
 
 ![](images/video_gif.gif)
 Full video on YouTube [SpaceChat](https://youtu.be/OxISvgrwO2w?t=83)
-
-## Some screenshots of the app
 
 ### Login page 
 <img src="./images/login_screen.jpg">
