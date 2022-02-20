@@ -13,11 +13,6 @@ The idea behind this project is to be able to create a minimum viable product of
 
 ## Some screenshots of the app
 
-### Realtime example
-
-![](images/video_gif.gif)
-Full video on YouTube [SpaceChat](https://youtu.be/OxISvgrwO2w?t=83)
-
 ### Login page 
 <img src="./images/login_screen.jpg">
 
@@ -26,6 +21,11 @@ Full video on YouTube [SpaceChat](https://youtu.be/OxISvgrwO2w?t=83)
 
 ### Example chat page 
 <img src="./images/chat_example.jpg">
+
+### Realtime example
+
+![](images/video_gif.gif)
+Full video on YouTube [SpaceChat](https://youtu.be/OxISvgrwO2w?t=83)
 
 ## How To Deploy
 
