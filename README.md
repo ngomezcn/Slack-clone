@@ -1,4 +1,4 @@
-# Slack / WhatsApp Clone
+# Slack Clone
 <img src="https://iconape.com/wp-content/png_logo_vector/nginx.png" align="right"
       width="150" height="150">
 
